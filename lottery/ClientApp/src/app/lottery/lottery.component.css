@@ -1,0 +1,33 @@
+li {
+        display: inline-block;
+        list-style-type: none;
+        width: 40px;
+        height: 40px;
+        border: 2px solid black;
+        border-radius: 20px;
+        margin: 10px;
+        padding: 5px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+  li._1_9 {
+    background-color: #aaa;
+  }
+
+  li._10_19 {
+    background-color: #48f;
+  }
+
+  li._20_29 {
+    background-color: pink;
+  }
+
+  li._30_39 {
+    background-color: #8f8;
+  }
+
+  li._40_49 {
+    background-color: yellow;
+  }
+

@@ -1,3 +1,4 @@
+using infrastructure.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +27,9 @@ namespace lottery
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+            services.AddTransient<IRndWrapper, RndWrapper>();
+            services.AddTransient<IRandomNumberGenerator, RandomNumberGenerator>();
+            services.AddTransient<ILotteryNumberGenerator, LotteryNumberGenerator>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

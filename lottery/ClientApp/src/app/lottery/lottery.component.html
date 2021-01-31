@@ -1,0 +1,18 @@
+<ul *ngIf="!finalResult">
+  <li [ngClass]="getClass(partialResult.ball1)">{{partialResult.ball1 || '&nbsp;'}}</li>
+  <li [ngClass]="getClass(partialResult.ball2)">{{partialResult.ball2 || '&nbsp;'}}</li>
+  <li [ngClass]="getClass(partialResult.ball3)">{{partialResult.ball3 || '&nbsp;'}}</li>
+  <li [ngClass]="getClass(partialResult.ball4)">{{partialResult.ball4 || '&nbsp;'}}</li>
+  <li [ngClass]="getClass(partialResult.ball5)">{{partialResult.ball5 || '&nbsp;'}}</li>
+  <li [ngClass]="getClass(partialResult.ball6)">{{partialResult.ball6 || '&nbsp;'}}</li>
+</ul>
+<ul *ngIf="finalResult">
+  <li [ngClass]="getClass(finalResult.ball1)">{{finalResult.ball1}}</li>
+  <li [ngClass]="getClass(finalResult.ball2)">{{finalResult.ball2}}</li>
+  <li [ngClass]="getClass(finalResult.ball3)">{{finalResult.ball3}}</li>
+  <li [ngClass]="getClass(finalResult.ball4)">{{finalResult.ball4}}</li>
+  <li [ngClass]="getClass(finalResult.ball5)">{{finalResult.ball5}}</li>
+  <li [ngClass]="getClass(finalResult.ball6)">{{finalResult.ball6}}</li>
+</ul>
+<button *ngIf="!partialResult.isFull" (click)="getNextBall()">Get Next Ball!</button>
+<button *ngIf="partialResult.isFull && !finalResult" (click)="getFinalResult()">Get Final Results!</button>
